@@ -16,9 +16,19 @@
     # To do so you can use the methods `.isdigit()` or `.isnumeric()`
     # If a user did not enter a number output a statement saying so
 # You will continue to prompt the user until a proper integer value is entered
-
+while True:
+    upper_bound = input("Enter a positive integer for the the factorial calculation:")
+    if upper_bound.isdigit():
+        upper_bound = int(upper_bound):
+        if upper_bound > 0:
+            break
+        else:
+            print("Please eneter a positive integer:")
+    else:
+        print("That's not valid number, please enter a positove integer.")
 factorial = 1
-
+for i in range (1, upper_bound + 1):
+    factorial *= i
 print(f"The result of the factorial based on the given bound is {factorial}")
 
 print("*"*75)
@@ -38,7 +48,14 @@ print("*"*75)
 # The sum should start at 0 
 
 num_sum = 0 
-
+while True:
+    user_input = input("Type a number to add to the sum or exit to finish:")
+    if user_input.lower() == 'exit' :
+        break
+    if user_input.lstrip('-').isdigit():
+        num_sum +=int(user_input)
+    else:
+        print("That's not valid number, Please enter valid integer.")
 print(f"Your final sum is {num_sum}")
 
 print("*"*75)
