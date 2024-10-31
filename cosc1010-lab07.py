@@ -1,9 +1,9 @@
-# Your Name Here
+# Your Name Here : Aris Yeimo
 # UWYO COSC 1010
-# Submission Date
+# Submission Date : 10/31/2024
 # Lab XX
-# Lab Section: 
-# Sources, people worked with, help given to: 
+# Lab Section: 07
+# Sources, people worked with, help given to: Lab Teacher
 # your
 # comments
 # here
