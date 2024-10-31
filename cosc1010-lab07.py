@@ -19,7 +19,7 @@
 while True:
     upper_bound = input("Enter a positive integer for the the factorial calculation:")
     if upper_bound.isdigit():
-        upper_bound = int(upper_bound):
+        upper_bound = int(upper_bound)
         if upper_bound > 0:
             break
         else:
@@ -75,5 +75,31 @@ print("*"*75)
     # So, it should function the same for `5 + 6` as `5+6`
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
-
+while True:
+    user_input = input("Enter Operand operator or type 'exit' to finish:")
+    if user_input.lower() == 'exit':
+        break
+    user_input = user_input.replace(" ", "")
+    for operator in ['+','-','*','/','%']:
+        if operator in user_input:
+            operands= user_input(operator)
+            if len(operands) == 2 and operands [0].isdigit() and operands(1).isdigit():
+                operand1 = int(operands[0])
+                operand2 = int(operands[1])
+                if operator == '+':
+                    result = operand1 + operand2
+                elif operator =='-':
+                    result = operand1 - operand2
+                elif operator == '*':
+                    result = operand1 * operand2
+                elif operator == '/':
+                    result = operand1 / operand2
+                elif operator == '%':
+                    result = operand1 % operand2
+                print(f"The result of {operand1} {operand2} is {result}")
+                break
+            else:
+                print("Invslid input, Please eneter in the form 'operand operator operand'.")
+        else:
+            print("Invalid operator. Please use one of the following: +,-,*,/,%")
         
